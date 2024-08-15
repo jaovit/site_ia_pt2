@@ -64,3 +64,23 @@ button:hover {
     flex-direction: column;
     gap: 10px;
 }
+
+.input-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: .5vw;
+}
+
+.nome {
+    background-color: transparent;
+    border: none;
+    border: .1vw solid var(--cor-texto);
+    color: var(--cor-texto);
+    padding: .25vw .5vw;
+    border-radius: .25vw;
+}
+
+.nome:focus {
+    outline: none;
+}
