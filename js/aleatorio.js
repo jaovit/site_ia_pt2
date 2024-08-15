@@ -5,4 +5,5 @@ const nomes = ["Fernanda", "Giuliana", "Maria Eduarda", "Marcelo", "Amanda", "Gu
     return lista[posicao];
 }
 
- const nome = aleatorio(nomes)
+// let nome = aleatorio(nomes)
+let nome = "";

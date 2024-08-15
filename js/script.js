@@ -6,6 +6,7 @@ const textoResultado = document.querySelector(".texto-resultado");
 const botaoJogarNovamente = document.querySelector(".novamente-btn");
 const botaoIniciar = document.querySelector(".iniciar-btn");
 const telaInicial = document.querySelector(".tela-inicial");
+const nomeInput = document.querySelector(".nome");
 
 let atual = 0;
 let perguntaAtual;
@@ -13,7 +14,17 @@ let historiaFinal = "";
 
 botaoIniciar.addEventListener('click', iniciaJogo);
 
+nomeInput.addEventListener("change", () => {
+    nome = nomeInput.value;
+})
+
 function iniciaJogo() {
+
+if (nome == "" || nome == undefined || nome == null) {
+    nome = aleatorio(nomes)
+}
+
+substituiNome();
     atual = 0;
     historiaFinal = "";
     telaInicial.style.display = 'none';
@@ -75,5 +86,3 @@ function substituiNome() {
         pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
     }
 }
-
-substituiNome();
